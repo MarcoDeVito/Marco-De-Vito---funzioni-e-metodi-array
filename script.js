@@ -49,31 +49,50 @@ console.log(clearedArray);
 // Esempio: Input: a= [3, 7, 2, 5, 8, 1, 2, 5, 6, 4], b= [9, 3, 1, 4, 7, 6, 5, 10, 1, 5], operazione = "addizione" Output: c = [12, 10, 3, 9, 15, 7, 7, 15, 7, 9]
 
 let a = [3, 7, 2, 5, 8, 1, 2, 5, 6, 4], b = [9, 3, 1, 4, 7, 6, 5, 10, 1, 5], operazione = "addizione";
-function calcArray(a,b,operation) {
-    let c=[];
-    for (let i = 0; i < a.length; i++) {
-        switch (operation) {
-            case "addizione":
-                c.push(a[i]+b[i]);
-                break;
-            case "sottrazione":
-                c.push(a[i]-b[i]);
-                break;
-            case "moltiplicazione":
-                c.push(a[i]*b[i]);
-                break;
-            case "divisione":
-                c.push(a[i]/b[i]);
-                break;
-        }
-        
-        
+// function calcArray(a,b,operation) {
+//     let c=[];
+//     for (let i = 0; i < a.length; i++) {
+//         switch (operation) {
+//             case "addizione":
+//                 c.push(a[i]+b[i]);
+//                 break;
+//             case "sottrazione":
+//                 c.push(a[i]-b[i]);
+//                 break;
+//             case "moltiplicazione":
+//                 c.push(a[i]*b[i]);
+//                 break;
+//             case "divisione":
+//                 c.push(a[i]/b[i]);
+//                 break;
+//         }
+
+
+//     }
+//     return c;
+// }
+
+
+function calcArray(a, b, operation) {
+    let c;
+    switch (operation) {
+        case "addizione":
+            c = a.map((el, i) => el + b[i]);
+            return c;
+        case "sottrazione":
+            c = a.map((el, i) => el - b[i]);
+            return c;
+        case "moltiplicazione":
+            c = a.map((el, i) => el * b[i]);
+            return c;
+        case "divisione":
+            c = a.map((el, i) => el / b[i]);
+            return c;
     }
-    return c;
 }
 
 
-console.log(calcArray(a,b,operazione));
-console.log(calcArray(a,b,"sottrazione"));
-console.log(calcArray(a,b,"moltiplicazione"));
-console.log(calcArray(a,b,"divisione"));
+    console.log(calcArray(a, b, operazione));
+    console.log(calcArray(a, b, "sottrazione"));
+    console.log(calcArray(a, b, "moltiplicazione"));
+    console.log(calcArray(a, b, "divisione"));
