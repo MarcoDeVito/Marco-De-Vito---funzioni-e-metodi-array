@@ -15,7 +15,7 @@ Scrivere una **funzione **che permetta di filtrare soltanto le parole all’inte
 *Suggerimento*: provate a filtrare in base al tipo di dato (operatore typeof)
 
 **Traccia 5**:
- Scrivi una **funzione **che dati 2 array di 10 elementi interi casuali compresi tra 1 e 10, permetta di effettuare, una delle seguenti operazioni: 
+ Scrivi una **funzione** che dati 2 array di 10 elementi interi casuali compresi tra 1 e 10, permetta di effettuare, una delle seguenti operazioni: 
 - addizione
 - sottrazione 
 - moltiplicazione 
